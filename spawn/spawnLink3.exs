@@ -3,7 +3,7 @@ defmodule SpawnLink3 do
 
   def child(parent) do
     send(parent, {:ok, "Hello"})
-    exit(:gone)
+    exit(:boom)
   end
 
   def run do
@@ -20,3 +20,4 @@ end
 
 SpawnLink3.run
 # MESSAGE RECEIVED: "Hello"
+# 메시지를 보내고 죽었는데도 받을 수 있네. sleep 중이었는데도 받는 것 같은게 신기

@@ -7,9 +7,9 @@ defmodule Spawn1 do
   end
 end
 
-
+#클라이언트
 pid = spawn(Spawn1, :greet, [])
-send pid, {self(), "World!"}
+send pid, {self(), "World!"} # self()는 현재 pid 반환.
 
 receive do
   {:ok, message} ->

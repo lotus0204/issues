@@ -23,3 +23,4 @@ receive do
   after 500 ->
     IO.puts "The greeter has gone away"
 end
+#after를 이용해 타임아웃이 발생하게 하였다.

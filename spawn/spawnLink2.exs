@@ -20,3 +20,6 @@ defmodule SpawnLink2 do
 end
 
 SpawnLink2.run
+# ** (EXIT from #PID<0.95.0>) an exception was raised:
+#     ** (UndefinedFunctionError) function SpawnLink.child/0 is undefined (module SpawnLink is not available)
+#         SpawnLink.child()

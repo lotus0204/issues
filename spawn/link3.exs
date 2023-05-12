@@ -18,4 +18,4 @@ defmodule Link3 do
   end
 end
 
-Link1.run
+Link3.run

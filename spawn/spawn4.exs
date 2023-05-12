@@ -24,3 +24,12 @@ receive do
   after 500 ->
     IO.puts "The greeter has gone away"
 end
+
+send pid, {self(), "elixir!"}
+receive do
+  {:ok, message} ->
+    IO.puts message
+  after 500 ->
+    IO.puts "The greeter has gone away"
+end
+#greet()를 재귀를 이용하여 메시지를 처리하도록 하였다. -> 메시지를 추가하여도 계속 호출이 가능하다.

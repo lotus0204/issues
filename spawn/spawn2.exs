@@ -21,3 +21,4 @@ receive do
   {:ok, message} ->
     IO.puts message
 end
+#greet가 하나의 메시지만 처리할 수 있기 때문에 두번째 메시지가 출력되지 않는다.
