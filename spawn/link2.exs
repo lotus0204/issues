@@ -17,4 +17,4 @@ defmodule Link2 do
   end
 end
 
-Link2.run
+Link2.run()
