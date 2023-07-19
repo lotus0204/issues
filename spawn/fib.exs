@@ -20,11 +20,12 @@ defmodule Scheduler do
   def run(num_processes, module, func, to_calculate) do
     (1..num_processes)
     |> Enum.map(fn(_) -> spawn(module, func, [self()]) end)
-    |> schedule_processes(to_calculate, [])
+    |> schedule_processes(to_calculate, []) #schedule_processes([pid1...pid10],to_calculate, [])
   end
 
   defp schedule_processes(processes, queue, results) do
     receive do
+      #가장 처음에 들어온다.
       {:ready, pid} when length(queue) > 0 ->
         [ next | tail ] = queue
         send pid, {:fib, next, self()}

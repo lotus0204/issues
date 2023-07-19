@@ -1,5 +1,5 @@
 defmodule Sequence.Server do
-  use GenServer
+  use GenServer # GenServer는 behavior이다.
 
   #생성자 역할을하는 코드
   def init(initial_number) do
